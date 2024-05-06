@@ -232,14 +232,14 @@ export default function LoginModal() {
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const User_Token = userCredential.user;
-      CreateFirebaseSession(User_Token);
-      console.log("success");
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    //   const User_Token = userCredential.user;
+    //   CreateFirebaseSession(User_Token);
+    //   console.log("success");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
