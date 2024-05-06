@@ -145,8 +145,8 @@ export default function LoginModal() {
     try {
       signInWithEmailAndPassword(auth, email, password)
       .then((userCredential: UserCredential) => {
-        const User_Token = userCredential.user;
-        CreateFirebaseSession(User_Token);
+        // const User_Token = userCredential.user;
+        // CreateFirebaseSession(User_Token);
       })
       .catch((err: { code: string, message: string }) => {
         console.log(err.code);
