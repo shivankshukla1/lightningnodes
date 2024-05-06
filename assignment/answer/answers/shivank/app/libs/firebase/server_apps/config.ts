@@ -16,10 +16,17 @@ export const firebaseConfig = {
   
 
 
-if (!firebase.apps.length) {
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  }
+// if (!firebase.apps.length) {
+//     // Initialize Firebase
+//     firebase.initializeApp(firebaseConfig);
+//   }
+  let firebaseApp;
+    try {
+    firebaseApp = getApp();
+    } catch (e) {
+    firebaseApp = initializeApp(firebaseConfig);
+    }
+
   
   export const auth = firebase.auth();
   
