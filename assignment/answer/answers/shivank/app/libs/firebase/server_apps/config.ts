@@ -1,5 +1,6 @@
 "use server";
 import firebase from 'firebase/app';
+import { initializeApp, getApp } from "firebase/app";
 // import 'firebase/auth';
 
 // import firebase from 'firebase'
