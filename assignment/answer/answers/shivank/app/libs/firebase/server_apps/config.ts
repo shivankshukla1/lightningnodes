@@ -1,35 +1,24 @@
-// "use server";
-// import firebase from 'firebase/app';
-// import { initializeApp, getApp } from "firebase/app";
-// import 'firebase/auth';
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+"use server";
+import { initializeApp, getApp } from "firebase/app";
+import 'firebase/auth';
 
-// // import firebase from 'firebase'
-// require('firebase/auth')
-// export const firebaseConfig = {
-//     apiKey: "AIzaSyBWmC2tyAXLqePImH1Z6Ew6jDtpwSKa6xM",
-//     authDomain: "lightningnodes-assignment.firebaseapp.com",
-//     projectId: "lightningnodes-assignment",
-//     storageBucket: "lightningnodes-assignment.appspot.com",
-//     messagingSenderId: "754244979264",
-//     appId: "1:754244979264:web:1c35935bda038c0e6f2da5",
-//     measurementId: "G-53W4GG2E4G"
-// };
-  
+export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+  measurementId: "YOUR_MEASUREMENT_ID"
+};
 
-// A
-// // if (!firebase.apps.length) {
-// //     // Initialize Firebase
-// //     firebase.initializeApp(firebaseConfig);
-// //   }
-//   let firebaseApp;
-//     try {
-//     firebaseApp = getApp();
-//     } catch (e) {
-//     firebaseApp = initializeApp(firebaseConfig);
-//     }
+let firebaseApp;
 
-  
-//   export const auth = firebase.auth();
-  
-//   export default firebase;
+// Initialize Firebase app only if it hasn't been initialized already
+try {
+  firebaseApp = getApp();
+} catch (e) {
+  firebaseApp = initializeApp(firebaseConfig);
+}
+
+export default firebaseApp;
