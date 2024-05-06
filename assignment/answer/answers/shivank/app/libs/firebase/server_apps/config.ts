@@ -1,7 +1,8 @@
 "use server";
 import firebase from 'firebase/app';
 import { initializeApp, getApp } from "firebase/app";
-// import 'firebase/auth';
+import 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 // import firebase from 'firebase'
 require('firebase/auth')
