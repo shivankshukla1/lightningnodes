@@ -142,20 +142,20 @@ export default function LoginModal() {
 
   const handleSignIn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential: UserCredential) => {
-        // const User_Token = userCredential.user;
-        // CreateFirebaseSession(User_Token);
-      })
-      .catch((err: { code: string, message: string }) => {
-        console.log(err.code);
-        console.log(err.message);
-      });
-      console.log("success");
-    } catch (error) {
-      console.log(error);
-    }
+    // try {
+    //   signInWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential: UserCredential) => {
+    //     // const User_Token = userCredential.user;
+    //     // CreateFirebaseSession(User_Token);
+    //   })
+    //   .catch((err: { code: string, message: string }) => {
+    //     console.log(err.code);
+    //     console.log(err.message);
+    //   });
+    //   console.log("success");
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   
