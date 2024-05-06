@@ -204,11 +204,11 @@
 //   );
 // }
 
-
+"use client"
 import { useState } from 'react';
 import { Input } from "@nextui-org/react";
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, UserCredential } from "firebase/auth";
 import Image from 'next/image';
 import logo from "./logo.png";
 import { CreateFirebaseSession } from "@/app/libs/firebase/server_apps/session_gen";
